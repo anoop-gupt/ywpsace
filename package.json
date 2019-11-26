@@ -1,0 +1,20 @@
+{
+  "name": "ywpsace",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "repository": "https://github.com/anoop-gupt/ywpsace.git",
+  "author": "Anoop Gupta <gupta.anoop.kumar@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^5.0.0"
+  },
+  "scripts": {
+    "client": "yarn workspace client start",
+    "server": "yarn workspace server start",
+    "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn client\"
+}
+}
